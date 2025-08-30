@@ -1,0 +1,24 @@
+@import url(/styles/global-reset.css);
+@import url(/styles/fonts.css);
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+/* @import url(/styles/colours.css); */
+:root {
+    --clr-primary: #005a8d;
+    --clr-accent: #ff5a5f;
+    --clr-background: #fafaf7;
+    --clr-text: #222;
+    --clr-divider: #e0e0e0;
+    --clr-highlight: #ffc845;
+}
+
+:root {
+    --font-main: "Merriweather Sans", sans-serif;
+    --font-deco: "Caveat", cursive;
+}
+
+body {
+    background-color: var(--clr-background);
+    font-family: var(--font-main);
+    color: var(--clr-text);
+}
