@@ -19,7 +19,7 @@
 @media (min-width: 1280px) {
     :root {
         --sh-pad: 3rem 10vw;
-        --hl-wdth: 47.5vw;
+        --hl-wdth: clamp(38rem, 47.5vw, 50rem);
         --menu-fs: 1.5rem;
         --ml-mt: 3rem;
     }
