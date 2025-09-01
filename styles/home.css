@@ -1,0 +1,151 @@
+@import url(/styles/global-reset.css);
+@import url(/styles/fonts.css);
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+/* @import url(/styles/colours.css); */
+:root {
+    --clr-primary: #005a8d;
+    --clr-accent: #ff5a5f;
+    --clr-background: #fafaf7;
+    --clr-text: #222;
+    --clr-divider: #e0e0e0;
+    --clr-highlight: #ffc845;
+}
+
+:root {
+    --font-main: "Merriweather Sans", sans-serif;
+    --font-deco: "Caveat", cursive;
+    /* Hero variables */
+    --ht-fs: clamp(1.5rem, 7vw, 3.5rem);
+    --hd-fs: clamp(1rem, 4vw, 2rem);
+    --hb-fs: 1rem;
+    --hb-pad-tb: clamp(1rem, 4vw, 2rem);
+    --hb-pad-lr: clamp(1rem, 4vw, 1.5rem);
+    --hb-gap: clamp(1.5rem, 6.5vw, 2rem);
+    --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
+    --hero-grid-gap-rows: clamp(1rem, 4vw, 1.5rem);
+    --hero-pad-tb: clamp(1rem, 4vw, 1.5rem);
+    --hero-pad-lr: clamp(1rem, 4vw, 1.5rem);
+    --hi-height: 61vw;
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --ht-fs: clamp(3.5rem, 7vw, 5rem);
+        --hd-fs: clamp(2rem, 4vw, 3rem);
+        --hb-fs: clamp(1rem, 2vw, 1.5rem);
+        --hb-pad-tb: 2rem;
+        --hb-gap: clamp(2rem, 4vw, 4rem);
+        --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
+        --hero-grid-gap-rows: clamp(1rem, 4vw, 2rem);
+        --hero-pad-tb: clamp(3rem, 3vw, 4rem);
+        --hero-pad-lr: clamp(1.5rem, 3vw, 8rem);
+        --hi-height: 38vw;
+    }
+}
+
+@media (min-width: 80rem) {
+    :root {
+        --hero-grid-gap-columns: 6vw;
+        --hero-grid-gap-rows: 2.5vw;
+        --hero-pad-tb: 4rem;
+        --hero-pad-lr: 10vw;
+        --hi-height: 33vw;
+    }
+}
+
+body {
+    background-color: var(--clr-background);
+    font-family: var(--font-main);
+    color: var(--clr-text);
+}
+
+.section-hero {
+    padding: var(--hero-pad-tb) var(--hero-pad-lr);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "title"
+        "desc1"
+        "image"
+        "desc2"
+        "button13"
+        "button14";
+    gap: var(--hero-grid-gap-rows) var(--hero-grid-gap-columns);
+}
+
+@media (min-width: 48rem) {
+    .section-hero {
+        grid-template-columns: 5fr 3fr;
+        grid-template-areas: 
+            "title title"
+            "desc1 desc1"
+            "image button13"
+            "image button14"
+            "desc2 desc2"
+    }
+}
+
+.hero__title {
+    font-family: var(--font-deco);
+    font-size: var(--ht-fs);
+    color: var(--clr-accent);
+    grid-area: title;
+}
+
+.hero__description {
+    font-weight: 200;
+    font-size: var(--hd-fs);
+}
+
+.hero__desc1 {
+    grid-area: desc1;
+}
+
+.hero__desc2 {
+    grid-area: desc2;
+}
+
+.hero__image {
+    width: 100%;
+    height: var(--hi-height);
+    border-radius: 0.5rem;
+    background-image: url(/assets/images/home-hero-320.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: image;
+}
+
+.hero__schedule-button {
+    font-size: var(--hb-fs);
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+    border-radius: 0.25rem;
+    padding: var(--hb-pad-tb) var(--hb-pad-lr);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: var(--hb-gap);
+    transition: all 0.2s ease-in-out;
+}
+
+.hero__schedule-button:hover,
+.hero__schedule-button:focus,
+.hero__schedule-button:focus-visible {
+    background-color: var(--clr-highlight);
+    color: var(--clr-primary);
+}
+
+.hero__but13 {
+    grid-area: button13;
+}
+
+.hero__but14 {
+    grid-area: button14;
+}
+
+.hero__schedule-button--link {
+    font-weight: 200;
+    align-self: flex-end;
+}
