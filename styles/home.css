@@ -2,6 +2,7 @@
 @import url(/styles/fonts.css);
 @import url(/styles/header.css);
 @import url(/styles/footer.css);
+@import url(/styles/variables.css);
 /* @import url(/styles/colours.css); */
 :root {
     --clr-primary: #005a8d;
@@ -24,8 +25,6 @@
     --hb-gap: clamp(1.5rem, 6.5vw, 2rem);
     --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
     --hero-grid-gap-rows: clamp(1rem, 4vw, 1.5rem);
-    --hero-pad-tb: clamp(1rem, 4vw, 1.5rem);
-    --hero-pad-lr: clamp(1rem, 4vw, 1.5rem);
     --hi-height: 61vw;
 }
 
@@ -38,8 +37,6 @@
         --hb-gap: clamp(2rem, 4vw, 4rem);
         --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
         --hero-grid-gap-rows: clamp(1rem, 4vw, 2rem);
-        --hero-pad-tb: clamp(3rem, 3vw, 4rem);
-        --hero-pad-lr: clamp(1.5rem, 3vw, 8rem);
         --hi-height: 38vw;
     }
 }
@@ -48,8 +45,6 @@
     :root {
         --hero-grid-gap-columns: 6vw;
         --hero-grid-gap-rows: 2.5vw;
-        --hero-pad-tb: 4rem;
-        --hero-pad-lr: 10vw;
         --hi-height: 33vw;
     }
 }
@@ -61,7 +56,8 @@ body {
 }
 
 .section-hero {
-    padding: var(--hero-pad-tb) var(--hero-pad-lr);
+    margin: var(--vmar) auto;
+    padding: 0 var(--hpad);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 

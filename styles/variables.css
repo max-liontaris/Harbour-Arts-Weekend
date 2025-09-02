@@ -1,0 +1,18 @@
+:root {
+    --vmar: clamp(1.5rem, 7vw, 3rem);
+    --hpad: clamp(1rem, 4vw, 1.5rem);
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --vmar: clamp(3rem, 6.35vw, 4rem);
+        --hpad: clamp(1.5rem, 3vw, 8rem);
+    }
+}
+
+@media (min-width: 80rem) {
+    :root {
+        --vmar: 4rem;
+        --hpad: 10vw;
+    }
+}

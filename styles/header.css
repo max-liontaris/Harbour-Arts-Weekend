@@ -1,6 +1,7 @@
+@import url(/styles/variables.css);
+
 /* Header variables */
 :root {
-    --sh-pad: clamp(1rem, 4.5vw, 1.5rem); 
     --hl-wdth: clamp(18rem, 100%, 21.5rem);
     --menu-fs: 1rem;
     --ml-justify: center;
@@ -9,7 +10,6 @@
 
 @media (min-width: 768px) {
     :root {
-        --sh-pad: clamp(1.5rem, 3.125vw, 3rem);
         --hl-wdth: clamp(22rem, 46vw, 38rem);
         --menu-fs: clamp(1rem, 2vw, 1.5rem);
         --ml-justify: space-between;
@@ -18,7 +18,6 @@
 
 @media (min-width: 1280px) {
     :root {
-        --sh-pad: 3rem 10vw;
         --hl-wdth: clamp(38rem, 47.5vw, 50rem);
         --menu-fs: 1.5rem;
         --ml-mt: 3rem;
@@ -26,7 +25,8 @@
 }
 
 .site__header {
-    padding: var(--sh-pad);
+    margin: var(--vmar) auto;
+    padding: 0 var(--hpad);
 }
 
 .header__logo {
