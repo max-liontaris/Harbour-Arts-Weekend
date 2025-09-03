@@ -31,6 +31,10 @@
     --ws-vgap: clamp(1rem, 4vw, 2rem);
     --ws-title-fs: clamp(1.5rem, 6.5vw, 2.5rem);
     --ws-desc-fs: clamp(1rem, 4vw, 1.5rem);
+    /* Highlights variables */
+    --hl-desc-fs: clamp(1rem, 4vw, 1.5rem);
+    --hl-title-fs: clamp(1.5rem, 7vw, 2.5rem);
+    --hl-title-margin: clamp(1rem, 4vw, 1.5rem);
 }
 
 @media (min-width: 48rem) {
@@ -48,6 +52,10 @@
         --ws-vgap: clamp(2rem, 4vw, 3rem);
         --ws-title-fs: clamp(2.5rem, 5vw, 3rem);
         --ws-desc-fs: 1.5rem;
+        /* Highlights variables */
+        --hl-desc-fs: 1.5rem;
+        --hl-title-fs: clamp(2.5rem, 5vw, 3rem);
+        --hl-title-margin: clamp(1.5rem, 3vw, 2rem);
     }
 }
 
@@ -60,6 +68,9 @@
         --ws-hgap: 8vw;
         --ws-vgap: 4vw;
         --ws-title-fs: clamp(3rem, 4vw, 5rem);
+        /* Highlights variables */
+        --hl-title-fs: clamp(3rem, 4vw, 5rem);
+        --hl-title-margin: 2rem;
     }
 }
 
@@ -70,7 +81,8 @@ body {
 }
 
 .section-hero,
-.section-workshops {
+.section-workshops,
+.section-highlights {
     margin: var(--vmar) auto;
     padding: 0 var(--hpad);
 }
@@ -244,4 +256,61 @@ body {
     outline: 0;
     color: var(--clr-highlight);
     transform: scale(1.1);
+}
+
+.section-highlights__title {
+    color: var(--clr-accent);
+    font-family: var(--font-deco);
+    font-size: var(--hl-title-fs);
+    margin-bottom: var(--hl-title-margin);
+}
+
+.highlight-cards__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+    justify-content: space-evenly;
+}
+
+.highlight-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    font-weight: 300;
+    font-size: var(--hl-desc-fs);
+    width: 100%;
+}
+
+.highlight-card img {
+    padding: max(4vw, 1rem);
+    width: max(19vw, 2.5rem);
+}
+
+@media (min-width: 48rem) {
+    .highlight-cards__wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .highlight-card {
+        border: 1px   var(--clr-primary) solid;
+        background-color: #fff;
+        flex-direction: column;
+        width: clamp(20.5rem, 42vw, 31rem);
+        padding: clamp(1.3rem, 3vw, 2rem);
+    }
+
+    .highlight-card img {
+        padding: 0;
+        width: auto;
+        height: clamp(7rem, 15vw, 9rem);
+    }
+}
+
+@media (min-width: 80rem) {
+    .highlight-card {
+        width: 36vw;
+        padding: 2.5vw 6vw;
+    }
 }

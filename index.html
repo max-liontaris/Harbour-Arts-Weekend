@@ -6,13 +6,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/home.css">
-
         <link rel="preload" as="image"
             href="/assets/images/home-hero-320.jpg"
             imagesrcset="/assets/images/home-hero-768.jpg 768w, /assets/images/home-hero-1280.jpg 1280w"
             imagesizes="(max-width: 1280px) 100vw, 100vw"
             type="image/jpeg">
-
     </head>
     <body>
         <header class="site__header">
@@ -55,7 +53,7 @@
                     <picture class="workshop__image">
                         <source media="(min-width: 48rem)" srcset="assets/images/home_printmaking-768.jpg">
                         <source media="(min-width: 80rem)" srcset="assets/images/home_printmaking-1280.jpg">
-                        <img src="assets/images/home_printmaking-360.jpg" alt="">
+                        <img src="assets/images/home_printmaking-360.jpg" alt="" loading="lazy">
                     </picture>
                     <h2 class="workshop__title">Hands-on Printmaking</h2>
                     <p class="workshop__description">Create your own poster with guidance from local artists.</p>
@@ -63,9 +61,9 @@
 
                 <article class="workshop">
                     <picture class="workshop__image">
-                        <source media="(min-width: 48rem)" srcset="assets/images/home_printmaking-768.jpg">
-                        <source media="(min-width: 80rem)" srcset="assets/images/home_printmaking-1280.jpg">
-                        <img src="assets/images/home_printmaking-360.jpg" alt="">
+                        <source media="(min-width: 48rem)" srcset="assets/images/home_photography-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/home_photography-1280.jpg">
+                        <img src="assets/images/home_photography-360.jpg" alt="" loading="lazy">
                     </picture>
                     <h2 class="workshop__title">Street Photography Walk</h2>
                     <p class="workshop__description">Capture the harbour’s hidden corners through your lens.</p>
@@ -73,15 +71,37 @@
 
                 <article class="workshop">
                     <picture class="workshop__image">
-                        <source media="(min-width: 48rem)" srcset="assets/images/home_printmaking-768.jpg">
-                        <source media="(min-width: 80rem)" srcset="assets/images/home_printmaking-1280.jpg">
-                        <img src="assets/images/home_printmaking-360.jpg" alt="">
+                        <source media="(min-width: 48rem)" srcset="assets/images/home_drumming-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/home_drumming-1280.jpg">
+                        <img src="assets/images/home_drumming-360.jpg" alt="" loading="lazy">
                     </picture>
                     <h2 class="workshop__title">Family Drumming Circle</h2>
                     <p class="workshop__description">Rhythm and fun for all ages, no experience required.</p>
                 </article>
 
                 <div class="see-more-button"><a href="#">See All Workshops ☛</a></div>
+            </section>
+
+            <section class="section-highlights">
+                <h2 class="section-highlights__title">Festival Highlights</h2>
+                <div class="highlight-cards__wrapper">
+                    <div class="highlight-card">
+                        <img src="/assets/images/home_hglt1.svg" alt="">
+                        <p>Over 40 performances from regional and national acts</p>
+                    </div>
+                    <div class="highlight-card">
+                        <img src="/assets/images/home_hglt2.svg" alt="">
+                        <p>Open studios with artists welcoming visitors</p>
+                    </div>
+                    <div class="highlight-card">
+                        <img src="/assets/images/home_hglt3.svg" alt="">
+                        <p>Street food, pop-up exhibitions, and late-night screenings</p>
+                    </div>
+                    <div class="highlight-card">
+                        <img src="/assets/images/home_hglt4.svg" alt="">
+                        <p>Venues all within walking distance of the harbour</p>
+                    </div>
+                </div>
             </section>
         </main>
 
