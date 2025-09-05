@@ -80,12 +80,20 @@ body {
     color: var(--clr-text);
 }
 
-.section-hero,
-.section-workshops,
-.section-highlights {
-    margin: var(--vmar) auto;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vmar);
     padding: 0 var(--hpad);
 }
+
+/* .section-hero,
+.section-workshops,
+.section-highlights,
+.section-logistics {
+    margin: var(--vmar) auto;
+    padding: 0 var(--hpad);
+} */
 
 .section-hero {
     display: grid;
@@ -185,10 +193,7 @@ body {
 
 .section-workshops::after {
     content: " ";
-    background-image: url(/assets/images/home-brush.svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url(/assets/images/home-brush.svg) no-repeat center / cover;
     position: absolute;
     display: none;
 }
@@ -208,7 +213,7 @@ body {
     .section-workshops::after {
         width: 5vw;
         height: 100%;
-        right: 16vw;
+        right: 12vw;
         top: 0;
         display: block;
     }
@@ -219,6 +224,9 @@ body {
 }
 
 @media (min-width: 80rem) {
+    .section-workshops::after {
+        right: 3vw;
+    }
     .workshop {
         width: 67vw;
     }
@@ -295,6 +303,7 @@ body {
 
     .highlight-card {
         border: 1px   var(--clr-primary) solid;
+        border-radius: 0.25rem;
         background-color: #fff;
         flex-direction: column;
         width: clamp(20.5rem, 42vw, 31rem);
@@ -312,5 +321,176 @@ body {
     .highlight-card {
         width: 36vw;
         padding: 2.5vw 6vw;
+        border-radius: 0.5rem;
+    }
+}
+
+.section-logistics {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 4vw, 2rem);
+    position: relative;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.section-logistics::before {
+    content: " ";
+    background: url(/assets/images/home-brush.svg) no-repeat center / contain;
+    position: absolute;
+    height: 100%;
+    display: none;
+}
+
+@media (min-width: 48rem) {
+    .section-logistics {
+        width: clamp(33.25rem, 69vw, 50.75rem);
+    }
+    .section-logistics::before {
+        display: block;
+        width: 9vw;
+        top: 0;
+        left: -17vw;
+    }
+}
+
+@media (min-width: 80rem) {
+    .section-logistics {
+        width: 63vw;
+    }
+
+    .section-logistics::before {
+        width: 5vw;
+        left: -14vw;
+    }
+}
+
+.logistics__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas:
+        "title arrow desc"
+        "line line line";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logistics__block-title {
+    grid-area: title;
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
+    font-family: var(--font-deco);
+    color: var(--clr-accent);
+}
+
+.logistics__block-arrow {
+    background: url(/assets/images/home-arrow.svg) no-repeat center / contain;
+    grid-area: arrow;
+    width: clamp(2rem, 10.5vw, 4rem);
+    height: 100%;
+    justify-self: center;
+}
+
+.logistics__block-desc {
+    grid-area: desc;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 300;
+}
+
+.logistics__block:nth-child(2)::after,
+.logistics__block:nth-child(3)::after {
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-highlight);
+    grid-area: line;
+    margin-top: clamp(1rem, 4vw, 2rem);
+}
+
+.txt-highlight {
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+
+:root {
+    --cta-gap: clamp(1rem, 4vw, 1.5rem);
+    --cta-title-fs: clamp(1.5rem, 7vw, 2.5rem);
+    --cta-desc-fs: clamp(1rem, 4vw, 1.5rem);
+}
+
+.section-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "title"
+        "desc"
+        "button-schedule"
+        "button-workshops";
+    gap: var(--cta-gap);
+    margin-bottom: var(--vmar);
+}
+
+.cta__title {
+    grid-area: title;
+    font-size: var(--cta-title-fs);
+    font-family: var(--font-deco);
+    color: var(--clr-accent);
+}
+
+.cta__desc {
+    grid-area: desc;
+    font-weight: 300;
+    font-size: var(--cta-desc-fs);
+}
+
+.cta__button {
+    font-weight: 300;
+    font-size: var(--cta-desc-fs);
+    background-color: var(--clr-accent);
+    color: var(--clr-background);
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 1rem;
+    transition: background-color 0.2s ease-in;
+}
+
+.cta__button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.cta__button:hover {
+    background-color: var(--clr-highlight);
+}
+
+.cta__button-schedule {
+    grid-area: button-schedule;
+}
+
+.cta__button-workshops {
+    grid-area: button-workshops;
+}
+
+@media (min-width: 48rem) {
+    :root {
+        --cta-gap: 3vw;
+        --cta-title-fs: clamp(2.5rem, 5vw, 3rem);
+        --cta-desc-fs: 3vw;
+    }
+
+    .section-cta {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "title title"
+        "desc desc"
+        "button-schedule button-workshops"
+    }
+}
+
+@media (min-width: 80rem) {
+    :root {
+        --cta-gap: 2vw;
+        --cta-title-fs: 4vw;
+        --cta-desc-fs: 2vw;
     }
 }

@@ -3,14 +3,14 @@
     --fml-justify: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     :root {
         --fml-pad: 1.5rem;
         --fml-justify: space-between;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
     :root {
         --fml-pad: 4rem 8rem;
     }
@@ -30,6 +30,11 @@
     flex-wrap: wrap;
     justify-content: var(--fml-justify);
     gap: 1rem 2.5rem;
+}
+
+.footer__menu-list a:hover,
+.footer__utility a:hover {
+    text-decoration: underline;
 }
 
 .footer__menu-list::after {
