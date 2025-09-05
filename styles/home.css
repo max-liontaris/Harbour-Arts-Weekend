@@ -16,60 +16,67 @@
 :root {
     --font-main: "Merriweather Sans", sans-serif;
     --font-deco: "Caveat", cursive;
+    
+    --fnt-size-main: clamp(1rem, 4vw, 1.5rem);
+    --fnt-size-heading: clamp(1.5rem, 6.5vw, 2.5rem);
+
+    --space-vert: clamp(1rem, 4vw, 2rem);
+    --space-hor: clamp(1rem, 4vw, 1.5rem);
+
     /* Hero variables */
-    --ht-fs: clamp(1.5rem, 6.8vw, 3.5rem);
-    --hd-fs: clamp(1rem, 4vw, 2rem);
-    --hb-fs: 1rem;
-    --hb-pad-tb: clamp(1rem, 4vw, 2rem);
-    --hb-pad-lr: clamp(1rem, 4vw, 1.5rem);
-    --hb-gap: clamp(1.5rem, 6.5vw, 2rem);
-    --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
-    --hero-grid-gap-rows: clamp(1rem, 4vw, 1.5rem);
-    --hi-height: 61vw;
+    --fnt-size-hero-title: clamp(1.5rem, 6.8vw, 3.5rem);
+    --fnt-size-hero-desc: clamp(1rem, 4vw, 2.1rem);
+    --fnt-size-hero-button: 1rem;
+    --pad-hero-button-vert: var(--space-vert);
+    --pad-hero-button-hor: var(--space-hor);
+    --hero-button-gap: clamp(1.5rem, 6.5vw, 2rem);
+    --hero-grid-gap-columns: var(--space-hor);
+    --hero-grid-gap-rows: var(--space-hor);
+    --hero-image-height: 61vw;
+
     /* Workshops variables */
-    --ws-hgap: clamp(1rem, 4vw, 1.5rem);
-    --ws-vgap: clamp(1rem, 4vw, 2rem);
-    --ws-title-fs: clamp(1.5rem, 6.5vw, 2.5rem);
-    --ws-desc-fs: clamp(1rem, 4vw, 1.5rem);
+    --wshops-gap-hor: var(--space-hor);
+    --wshops-gap-vert: var(--space-vert);
+
     /* Highlights variables */
-    --hl-desc-fs: clamp(1rem, 4vw, 1.5rem);
-    --hl-title-fs: clamp(1.5rem, 7vw, 2.5rem);
-    --hl-title-margin: clamp(1rem, 4vw, 1.5rem);
+    --hl-title-margin: var(--space-hor);
 }
 
 @media (min-width: 48rem) {
     :root {
-        --ht-fs: clamp(3.4rem, 7vw, 5rem);
-        --hd-fs: clamp(2rem, 4vw, 3rem);
-        --hb-fs: clamp(1rem, 2vw, 1.5rem);
-        --hb-pad-tb: 2rem;
-        --hb-gap: clamp(2rem, 4vw, 4rem);
-        --hero-grid-gap-columns: clamp(1rem, 4vw, 1.5rem);
-        --hero-grid-gap-rows: clamp(1rem, 4vw, 2rem);
-        --hi-height: 38vw;
+        --fnt-size-heading: clamp(2.5rem, 5vw, 3rem);
+
+        --fnt-size-hero-title: clamp(3.4rem, 7vw, 5rem);
+        --fnt-size-hero-desc: clamp(2rem, 4vw, 3.1rem);
+        --fnt-size-hero-button: clamp(1rem, 2vw, 1.5rem);
+        --pad-hero-button-vert: 2rem;
+        --hero-button-gap: clamp(2rem, 4vw, 4rem);
+        --hero-grid-gap-columns: var(--space-hor);
+        --hero-grid-gap-rows: var(--space-vert);
+        --hero-image-height: 38vw;
+
         /* Workshops variables */
-        --ws-hgap: clamp(1.5rem, 3vw, 6.5rem);
-        --ws-vgap: clamp(2rem, 4vw, 3rem);
-        --ws-title-fs: clamp(2.5rem, 5vw, 3rem);
-        --ws-desc-fs: 1.5rem;
+        --wshops-gap-hor: clamp(1.5rem, 3vw, 6.5rem);
+        --wshops-gap-vert: clamp(2rem, 4vw, 3rem);
+
         /* Highlights variables */
-        --hl-desc-fs: 1.5rem;
-        --hl-title-fs: clamp(2.5rem, 5vw, 3rem);
         --hl-title-margin: clamp(1.5rem, 3vw, 2rem);
     }
 }
 
 @media (min-width: 80rem) {
     :root {
+        --fnt-size-heading: clamp(2rem, 4vw, 5rem);
+
         --hero-grid-gap-columns: 6vw;
         --hero-grid-gap-rows: 2.5vw;
-        --hi-height: 33vw;
+        --hero-image-height: 33vw;
+
         /* Workshops variables */
-        --ws-hgap: 8vw;
-        --ws-vgap: 4vw;
-        --ws-title-fs: clamp(3rem, 4vw, 5rem);
+        --wshops-gap-hor: 8vw;
+        --wshops-gap-vert: 4vw;
+
         /* Highlights variables */
-        --hl-title-fs: clamp(3rem, 4vw, 5rem);
         --hl-title-margin: 2rem;
     }
 }
@@ -87,13 +94,7 @@ main {
     padding: 0 var(--hpad);
 }
 
-/* .section-hero,
-.section-workshops,
-.section-highlights,
-.section-logistics {
-    margin: var(--vmar) auto;
-    padding: 0 var(--hpad);
-} */
+/* ---------- SECTION HERO ---------- */
 
 .section-hero {
     display: grid;
@@ -122,14 +123,14 @@ main {
 
 .hero__title {
     font-family: var(--font-deco);
-    font-size: var(--ht-fs);
+    font-size: var(--fnt-size-hero-title);
     color: var(--clr-accent);
     grid-area: title;
 }
 
 .hero__description {
     font-weight: 200;
-    font-size: var(--hd-fs);
+    font-size: var(--fnt-size-hero-desc);
 }
 
 .hero__desc1 {
@@ -142,7 +143,7 @@ main {
 
 .hero__image {
     width: 100%;
-    height: var(--hi-height);
+    height: var(--hero-image-height);
     border-radius: 0.5rem;
     background-image: url(/assets/images/home-hero-320.jpg);
     background-position: center;
@@ -152,15 +153,15 @@ main {
 }
 
 .hero__schedule-button {
-    font-size: var(--hb-fs);
+    font-size: var(--fnt-size-hero-button);
     background-color: var(--clr-primary);
     color: var(--clr-background);
     border-radius: 0.25rem;
-    padding: var(--hb-pad-tb) var(--hb-pad-lr);
+    padding: var(--space-vert) var(--pad-hero-button-hor);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: var(--hb-gap);
+    gap: var(--hero-button-gap);
     transition: all 0.2s ease-in-out;
 }
 
@@ -188,8 +189,10 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--ws-vgap);
+    gap: var(--wshops-gap-vert);
 }
+
+/* ---------- SECTION WORKSHOPS ---------- */
 
 .section-workshops::after {
     content: " ";
@@ -205,7 +208,7 @@ main {
     grid-template-areas: 
         "image title"
         "image description";
-    gap: 0 var(--ws-hgap);
+    gap: 0 var(--wshops-gap-hor);
 
 }
 
@@ -240,20 +243,20 @@ main {
     grid-area: title;
     color: var(--clr-accent);
     font-family: var(--font-deco);
-    font-size: var(--ws-title-fs);
+    font-size: var(--fnt-size-heading);
 }
 
 .workshop__description {
     grid-area: description;
     align-self: end;
     font-weight: 300;
-    font-size: var(--ws-desc-fs);
+    font-size: var(--fnt-size-main);
 }
 
 .see-more-button {
     color: var(--clr-accent);
     font-weight: 300;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: var(--fnt-size-main);
     align-self: center;
     transition: all 0.2s ease-in-out;
 }
@@ -266,10 +269,12 @@ main {
     transform: scale(1.1);
 }
 
+/* ---------- SECTION HIGHLIGHTS ---------- */
+
 .section-highlights__title {
     color: var(--clr-accent);
     font-family: var(--font-deco);
-    font-size: var(--hl-title-fs);
+    font-size: var(--fnt-size-heading);
     margin-bottom: var(--hl-title-margin);
 }
 
@@ -286,8 +291,14 @@ main {
     justify-content: space-between;
     gap: 4vw;
     font-weight: 300;
-    font-size: var(--hl-desc-fs);
+    font-size: var(--fnt-size-main);
     width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.highlight-card:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
 }
 
 .highlight-card img {
@@ -325,10 +336,12 @@ main {
     }
 }
 
+/* ---------- SECTION LOGISTICS ---------- */
+
 .section-logistics {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 4vw, 2rem);
+    gap: var(--space-vert);
     position: relative;
     margin-left: auto;
     margin-right: 0;
@@ -377,7 +390,7 @@ main {
 
 .logistics__block-title {
     grid-area: title;
-    font-size: clamp(1.5rem, 7vw, 2.5rem);
+    font-size: var(--fnt-size-heading);
     font-family: var(--font-deco);
     color: var(--clr-accent);
 }
@@ -392,7 +405,7 @@ main {
 
 .logistics__block-desc {
     grid-area: desc;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: var(--fnt-size-main);
     font-weight: 300;
 }
 
@@ -403,7 +416,7 @@ main {
     height: 1px;
     background-color: var(--clr-highlight);
     grid-area: line;
-    margin-top: clamp(1rem, 4vw, 2rem);
+    margin-top: var(--space-vert);
 }
 
 .txt-highlight {
@@ -411,10 +424,10 @@ main {
     font-weight: 500;
 }
 
+/* ---------- SECTION CTA ---------- */
+
 :root {
-    --cta-gap: clamp(1rem, 4vw, 1.5rem);
-    --cta-title-fs: clamp(1.5rem, 7vw, 2.5rem);
-    --cta-desc-fs: clamp(1rem, 4vw, 1.5rem);
+    --cta-gap: var(--space-hor);
 }
 
 .section-cta {
@@ -431,7 +444,7 @@ main {
 
 .cta__title {
     grid-area: title;
-    font-size: var(--cta-title-fs);
+    font-size: var(--fnt-size-heading);
     font-family: var(--font-deco);
     color: var(--clr-accent);
 }
@@ -439,12 +452,12 @@ main {
 .cta__desc {
     grid-area: desc;
     font-weight: 300;
-    font-size: var(--cta-desc-fs);
+    font-size: var(--fnt-size-main);
 }
 
 .cta__button {
     font-weight: 300;
-    font-size: var(--cta-desc-fs);
+    font-size: var(--fnt-size-main);
     background-color: var(--clr-accent);
     color: var(--clr-background);
     border-radius: 0.25rem;
@@ -474,8 +487,7 @@ main {
 @media (min-width: 48rem) {
     :root {
         --cta-gap: 3vw;
-        --cta-title-fs: clamp(2.5rem, 5vw, 3rem);
-        --cta-desc-fs: 3vw;
+        --cta-title-fs: var(--fnt-size-heading);
     }
 
     .section-cta {
@@ -491,6 +503,5 @@ main {
     :root {
         --cta-gap: 2vw;
         --cta-title-fs: 4vw;
-        --cta-desc-fs: 2vw;
     }
 }
