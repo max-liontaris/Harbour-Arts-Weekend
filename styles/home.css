@@ -1,58 +1,35 @@
 @import url(/styles/global-reset.css);
 @import url(/styles/fonts.css);
+@import url(/styles/variables.css);
+@import url(/styles/colours.css);
+
 @import url(/styles/header.css);
 @import url(/styles/footer.css);
-@import url(/styles/variables.css);
-/* @import url(/styles/colours.css); */
-:root {
-    --clr-primary: #005a8d;
-    --clr-accent: #ff5a5f;
-    --clr-background: #fafaf7;
-    --clr-text: #222;
-    --clr-divider: #e0e0e0;
-    --clr-highlight: #ffc845;
-}
 
 :root {
-    --font-main: "Merriweather Sans", sans-serif;
-    --font-deco: "Caveat", cursive;
-    
-    --fnt-size-main: clamp(1rem, 4vw, 1.5rem);
-    --fnt-size-heading: clamp(1.5rem, 6.5vw, 2.5rem);
-
-    --space-vert: clamp(1rem, 4vw, 2rem);
-    --space-hor: clamp(1rem, 4vw, 1.5rem);
-
     /* Hero variables */
     --fnt-size-hero-title: clamp(1.5rem, 6.8vw, 3.5rem);
     --fnt-size-hero-desc: clamp(1rem, 4vw, 2.1rem);
     --fnt-size-hero-button: 1rem;
-    --pad-hero-button-vert: var(--space-vert);
-    --pad-hero-button-hor: var(--space-hor);
+
     --hero-button-gap: clamp(1.5rem, 6.5vw, 2rem);
-    --hero-grid-gap-columns: var(--space-hor);
-    --hero-grid-gap-rows: var(--space-hor);
     --hero-image-height: 61vw;
 
     /* Workshops variables */
-    --wshops-gap-hor: var(--space-hor);
-    --wshops-gap-vert: var(--space-vert);
+    --wshops-gap-hor: var(--space);
+    --wshops-gap-vert: var(--space);
 
     /* Highlights variables */
-    --hl-title-margin: var(--space-hor);
+    --hl-title-margin: var(--space);
 }
 
 @media (min-width: 48rem) {
     :root {
-        --fnt-size-heading: clamp(2.5rem, 5vw, 3rem);
-
-        --fnt-size-hero-title: clamp(3.4rem, 7vw, 5rem);
+        --fnt-size-hero-title: clamp(3.4rem, 6vw, 8rem);
         --fnt-size-hero-desc: clamp(2rem, 4vw, 3.1rem);
         --fnt-size-hero-button: clamp(1rem, 2vw, 1.5rem);
-        --pad-hero-button-vert: 2rem;
+
         --hero-button-gap: clamp(2rem, 4vw, 4rem);
-        --hero-grid-gap-columns: var(--space-hor);
-        --hero-grid-gap-rows: var(--space-vert);
         --hero-image-height: 38vw;
 
         /* Workshops variables */
@@ -66,10 +43,6 @@
 
 @media (min-width: 80rem) {
     :root {
-        --fnt-size-heading: clamp(2rem, 4vw, 5rem);
-
-        --hero-grid-gap-columns: 6vw;
-        --hero-grid-gap-rows: 2.5vw;
         --hero-image-height: 33vw;
 
         /* Workshops variables */
@@ -106,7 +79,7 @@ main {
         "desc2"
         "button13"
         "button14";
-    gap: var(--hero-grid-gap-rows) var(--hero-grid-gap-columns);
+    gap: var(--space) var(--space);
 }
 
 @media (min-width: 48rem) {
@@ -157,7 +130,7 @@ main {
     background-color: var(--clr-primary);
     color: var(--clr-background);
     border-radius: 0.25rem;
-    padding: var(--space-vert) var(--pad-hero-button-hor);
+    padding: var(--space) var(--space);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -341,10 +314,15 @@ main {
 .section-logistics {
     display: flex;
     flex-direction: column;
-    gap: var(--space-vert);
+    gap: var(--space);
     position: relative;
     margin-left: auto;
     margin-right: 0;
+}
+
+.section-logistics .see-more-button {
+    align-self: flex-end;
+    margin-top: var(--space);
 }
 
 .section-logistics::before {
@@ -416,7 +394,7 @@ main {
     height: 1px;
     background-color: var(--clr-highlight);
     grid-area: line;
-    margin-top: var(--space-vert);
+    margin-top: var(--space);
 }
 
 .txt-highlight {
@@ -427,7 +405,7 @@ main {
 /* ---------- SECTION CTA ---------- */
 
 :root {
-    --cta-gap: var(--space-hor);
+    --cta-gap: var(--space);
 }
 
 .section-cta {
@@ -436,8 +414,8 @@ main {
     grid-template-areas:
         "title"
         "desc"
-        "button-schedule"
-        "button-workshops";
+        "button-workshops"
+        "button-schedule";
     gap: var(--cta-gap);
     margin-bottom: var(--vmar);
 }
@@ -463,13 +441,8 @@ main {
     border-radius: 0.25rem;
     text-align: center;
     padding: 1rem;
-    transition: background-color 0.2s ease-in;
-}
-
-.cta__button a {
     display: block;
-    width: 100%;
-    height: 100%;
+    transition: background-color 0.2s ease-in;
 }
 
 .cta__button:hover {

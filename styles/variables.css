@@ -1,18 +1,46 @@
+@import url(/styles/fonts.css);
+
 :root {
+    /* Font families */
+    --font-main: "Merriweather Sans", sans-serif;
+    --font-deco: "Caveat", cursive;
+
+    /* Font sizes */
+    --fnt-size-heading: clamp(1.5rem, 6.5vw, 2.5rem);
+    --fnt-size-main: clamp(1rem, 4vw, 1.5rem);
+    
+    /* Distance between sections */
     --vmar: clamp(1.5rem, 7vw, 3rem);
     --hpad: clamp(1rem, 4vw, 1.5rem);
+
+    /* Space */
+    --space: clamp(1rem, 4vw, 1.5rem);
 }
 
 @media (min-width: 48rem) {
     :root {
+        /* Distance between sections */
         --vmar: clamp(3rem, 6.35vw, 4rem);
         --hpad: clamp(1.5rem, 3vw, 8rem);
+
+        /* Font sizes */
+        --fnt-size-heading: clamp(2.5rem, 5vw, 3rem);
+
+        /* Space */
+        --space: 3vw;
     }
 }
 
 @media (min-width: 80rem) {
     :root {
+        /* Distance between sections */
         --vmar: 4rem;
         --hpad: 10vw;
+
+        /* Font sizes */
+        --fnt-size-heading: clamp(2rem, 4vw, 5rem);
+
+        /* Space */
+        --space: 2vw;
     }
 }
