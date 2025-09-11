@@ -15,6 +15,9 @@
 
     /* Space */
     --space: clamp(1rem, 4vw, 1.5rem);
+
+    /* Hero Image */
+    --hero-image-height: 61vw;
 }
 
 @media (min-width: 48rem) {
@@ -28,6 +31,9 @@
 
         /* Space */
         --space: 3vw;
+
+        /* Hero Image */
+        --hero-image-height: 38vw;
     }
 }
 
@@ -42,5 +48,8 @@
 
         /* Space */
         --space: 2vw;
+
+        /* Hero Image */
+        --hero-image-height: 33vw;
     }
 }
