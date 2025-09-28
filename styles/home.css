@@ -51,12 +51,6 @@
     }
 }
 
-body {
-    background-color: var(--clr-background);
-    font-family: var(--font-main);
-    color: var(--clr-text);
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -91,14 +85,14 @@ main {
     }
 }
 
-.hero__title {
+.home-hero__title {
     font-family: var(--font-deco);
     font-size: var(--fnt-size-hero-title);
     color: var(--clr-accent);
     grid-area: title;
 }
 
-.hero__description {
+.home-hero__description {
     font-weight: 200;
     font-size: var(--fnt-size-hero-desc);
 }
@@ -152,14 +146,14 @@ main {
     align-self: flex-end;
 }
 
+/* ---------- SECTION WORKSHOPS ---------- */
+
 .section-workshops {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--wshops-gap-vert);
 }
-
-/* ---------- SECTION WORKSHOPS ---------- */
 
 .section-workshops::after {
     content: " ";

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Harbour Arts Weekend | Schedule</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/workshops.css">
+    </head>
+    <body>
+        <header class="site__header">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="/assets/haw-logo.svg" alt="Harbour Arts Weekend logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="header__menu-list">
+                    <li><a href="/">Home</a></li>
+                    <li class="header__menu-list--highlight"><a href="/schedule.html">schedule</a></li>
+                    <li class="active">workshops</li>
+                    <li><a href="venues.html">venues</a></li>
+                    <li><a href="faq.html">faq</a></li>
+                    <li><a href="about.html">about/contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="section-hero">
+                <div class="hero__image">
+                    <h1 class="hero__title">Festival Workshops</h1>
+                    <p class="hero__description">Learn new skills and meet artists in an intimate setting</p>
+                </div>
+            </section>
+
+            <section class="section-info" aria-labelledby="important-info">
+                <h2 id="important-info" class="visually-hidden">Important Information</h2>
+                <p class="info__paragraph">Workshops are a core part of Harbour Arts Weekend.</p>
+                <p class="info__paragraph">From hands-on crafts to guided walks, these sessions give you the chance to create, participate, and connect.</p>
+                <p class="info__paragraph">Places are limited, so please register early.</p>
+            </section>
+
+            <section class="section-workshops" aria-labelledby="ws-title">
+                <h2 id="ws-title" class="visually-hidden">Workshops</h2>
+                <article class="workshop">
+                    <picture class="workshop__image">
+                        <source media="(min-width: 48rem)" srcset="assets/images/home_printmaking-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/home_printmaking-1280.jpg">
+                        <img src="assets/images/home_printmaking-360.jpg" alt="" loading="lazy">
+                    </picture>
+                    <h2 class="workshop__title headings">Hands-on Printmaking</h2>
+                    <div class="time-and-place__wrapper">
+                        <p class="workshop__time">Saturday 11:30</p>
+                        <img class="workshop__star" src="/assets/images/workshops/ws-star.svg" alt="">
+                        <p class="workshop__place">Harbour Studio 2</p>
+                    </div>
+                    <p class="workshop__description">Create your own hand-printed poster using traditional techniques. All materials provided. No experience needed.</p>
+                </article>
+
+                <article class="workshop">
+                    <picture class="workshop__image">
+                        <source media="(min-width: 48rem)" srcset="assets/images/home_drumming-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/home_drumming-1280.jpg">
+                        <img src="assets/images/home_drumming-360.jpg" alt="" loading="lazy">
+                    </picture>
+                    <h2 class="workshop__title headings">Family Drumming Circle</h2>
+                    <div class="time-and-place__wrapper">
+                        <p class="workshop__time">Saturday 15:00</p>
+                        <img class="workshop__star" src="/assets/images/workshops/ws-star.svg" alt="">
+                        <p class="workshop__place">Community Hall</p>
+                    </div>
+                    <p class="workshop__description">Feel the rhythm together! A fun and inclusive session for children and adults alike. Instruments provided.</p>
+                </article>
+
+                <article class="workshop">
+                    <picture class="workshop__image">
+                        <source media="(min-width: 48rem)" srcset="assets/images/home_photography-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/assets/images/home_photography-1280.jpg">
+                        <img src="assets/images/home_photography-360.jpg" alt="" loading="lazy">
+                    </picture>
+                    <h2 class="workshop__title headings">Street Photography Walk</h2>
+                    <div class="time-and-place__wrapper">
+                        <p class="workshop__time">Sunday 10:30</p>
+                        <img class="workshop__star" src="/assets/images/workshops/ws-star.svg" alt="">
+                        <p class="workshop__place">Meeting point: Info Desk</p>
+                    </div>
+                    <p class="workshop__description">Explore the harbour’s hidden corners with your camera. Learn practical tips on framing, light, and storytelling. Bring your own camera or smartphone.</p>
+                </article>
+
+                <article class="workshop">
+                    <picture class="workshop__image">
+                        <source media="(min-width: 48rem)" srcset="assets/images/workshops/ws_songwriting-768.jpg">
+                        <source media="(min-width: 80rem)" srcset="assets/images/workshops/ws_songwriting-1280.jpg">
+                        <img src="assets/images/workshops/ws_songwriting-360.jpg" alt="" loading="lazy">
+                    </picture>
+                    <h2 class="workshop__title headings">Songwriters’ Circle</h2>
+                    <div class="time-and-place__wrapper">
+                        <p class="workshop__time">Sunday 14:00</p>
+                        <img class="workshop__star" src="/assets/images/workshops/ws-star.svg" alt="">
+                        <p class="workshop__place">Harbour Studio 1</p>
+                    </div>
+                    <p class="workshop__description">Sit in with local songwriters as they share their process. Participants may bring lyrics or instruments for informal feedback.</p>
+                </article>
+            </section>
+
+            <section class="section-registration" id="ws-registration">
+                <h2 class="headings">Workshops Registration</h2>
+                <form action="#" method="post" class="registration__form">
+                    <fieldset class="registration__form--contact">
+                        <legend class="visually-hidden">Contact Information</legend>
+
+                        <label class="registration__form--block-field">Your Name (required):
+                            <input type="text" placeholder="John Doe" required>
+                        </label>
+
+                        <label class="registration__form--block-field">Email Address (required):
+                            <input type="email" placeholder="name@example.com" required>
+                        </label>
+
+                        <label class="registration__form--block-field">Phone Number:
+                            <input type="tel" value="+44 " placeholder="+44 20 1234 5678" inputmode="tel" autocomplete="tel" pattern="^\+44(?:[\s-]?\d){10}$">
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="registration__form--checkboxes">
+                        <legend>Select at least one workshop:</legend>
+
+                        <label class="registration__form--block-checkbox">
+                            <input type="checkbox" name="reg_printmaking" value="yes" checked>
+                            <p class="registration__form-ws_name">Hands-on Printmaking</p>
+                            <p class="registration__form-ws-info">Sat 11:30,<br>Harbour Studio 2</p>
+                        </label>
+                        
+                        <label class="registration__form--block-checkbox">
+                            <input type="checkbox" name="reg_drumming" value="yes" checked>
+                            <p class="registration__form-ws_name">Family Drumming Circle</p>
+                            <p class="registration__form-ws-info">Sat 15:00,<br>Community Hall</p>
+                        </label>
+
+                        <label class="registration__form--block-checkbox">
+                            <input type="checkbox" name="reg_photography" value="yes" checked>
+                            <p class="registration__form-ws_name">Street Photography Walk</p>
+                            <p class="registration__form-ws-info">Sun 10:30,<br>Meeting point: Info Desk</p>
+                        </label>
+
+                        <label class="registration__form--block-checkbox">
+                            <input type="checkbox" name="reg_songwriting" value="yes" checked>
+                            <p class="registration__form-ws_name">Songwriters’ Circle</p>
+                            <p class="registration__form-ws-info">Sun 14:00,<br>Harbour Studio 1</p>
+                        </label>
+                    </fieldset>
+
+                    <label class="registration__form--comments">
+                        Tell us if you need any adjustments to participate comfortably, or leave any other comments:
+                        <textarea name="" id="" rows="5" placeholder="Type your message here"></textarea>
+                    </label>
+
+                    <div class="registration__form--submit">
+                        <label>
+                            <input type="checkbox" name="consent" value="yes" required>
+                            I agree to be contacted about my registration for this event (required).
+                        </label>
+                        <button type="submit" formaction="thankyou.html" formmethod="get">Submit Registration</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="section-info" aria-labelledby="important-info">
+                <h2 class="headings">Closing Notes</h2>
+                <p class="info__paragraph">Workshop spaces fill quickly — registering in advance is the only way to guarantee a spot.</p>
+                <p class="info__paragraph">Admission to all other festival events remains free.</p>
+            </section>
+
+        </main>
+
+        <footer class="site__footer">
+            <nav>
+                <ul class="footer__menu-list">
+                    <li><a href="/">home</a></li>
+                    <li><a href="schedule.html">schedule</a></li>
+                    <li><a href="workshops.html">workshops</a></li>
+                    <li><a href="venues.html">venues</a></li>
+                    <li><a href="faq.html">faq</a></li>
+                    <li><a href="about.html">about/contact</a></li>
+                </ul>
+                <div class="footer__utility">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p class="footer__copyright">© 2025, Harbour Arts Weekend</p>
+            </nav>
+        </footer>
+    </body>
+</html>

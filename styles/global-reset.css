@@ -1,3 +1,5 @@
+@import url(/styles/variables.css);
+
 /* Global reset and box model */
 *,
 *::after,
@@ -24,7 +26,8 @@ select {
   font-size: 100%;
 }
 
-button {
+button,
+label {
   cursor: pointer;
 }
 
@@ -50,6 +53,10 @@ picture {
   display: block;
 }
 
+fieldset {
+    border: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -57,4 +64,103 @@ picture {
   clip: rect(0 0 0 0);
   overflow: hidden;
   white-space: nowrap;
+}
+
+body {
+    background-color: var(--clr-background);
+    font-family: var(--font-main);
+    color: var(--clr-text);
+}
+
+.hero__image {
+    /* background-image: 
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
+        url(/assets/images/schedule/sch-hero.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: var(--hero-image-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: end;
+    align-items: flex-end;
+    gap: var(--hero-gap);
+    padding: var(--hero-padding);
+    border-radius: 0.5rem;
+}
+
+.hero__title {
+    font-family: var(--font-deco);
+    color: var(--clr-background);
+    font-size: var(--fnt-size-hero-title);
+    position: relative;
+    z-index: 0;
+}
+
+.hero__title::after {
+    content: "";
+    background: url(/assets/images/schedule/pink-brush.svg) no-repeat center / contain;
+    position: absolute;
+    top: 33%;
+    right: -9%;
+    z-index: -1;
+    width: var(--hero-brush-width);
+    height: var(--hero-brush-height);
+}
+
+.hero__description {
+    font-family: var(--font-main);
+    color: var(--clr-background);
+    font-size: var(--fnt-size-hero-desc);
+    font-weight: 300;
+    width: 70%;
+}
+
+.section-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: var(--vmar);
+}
+
+.info__paragraph {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 3fr;
+    font-weight: 300;
+    font-size: var(--fnt-size-main);
+}
+
+.info__paragraph::before {
+    content: "";
+    background: url(/assets/images/home-arrow.svg) no-repeat center / contain;
+    width: min(19vw, 70px);
+    height: 4vw;
+    padding: 0 4vw;
+    align-self: center;
+}
+
+@media (min-width: 48rem) {
+    .section-info {
+        border: 1px var(--clr-highlight) solid;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 6vw 12vw;
+    }
+
+    .info__paragraph::before {
+        height: 2vw;
+    }
+}
+
+@media (min-width: 80rem) {
+    .section-info {
+        padding: 4vw 8vw;
+    }
+
+    .info__paragraph::before {
+        height: 1.25vw;
+    }
 }

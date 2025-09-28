@@ -1,0 +1,259 @@
+@import url(/styles/global-reset.css);
+@import url(/styles/fonts.css);
+@import url(/styles/variables.css);
+@import url(/styles/colours.css);
+
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--vmar); */
+    padding: 0 var(--hpad);
+    margin-bottom: var(--vmar);
+}
+
+.hero__image {
+    background-image: 
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
+        url(/assets/images/workshops/ws-hero-image.jpg);
+}
+
+.headings {
+    color: var(--clr-accent);
+    font-family: var(--font-deco);
+    font-size: var(--fnt-size-heading);
+}
+
+.section-workshops {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+.section-workshops,
+.section-registration {
+    margin-top: var(--vmar);
+}
+
+.workshop {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "image title"
+        "image time-place"
+        "description description";
+    gap: 0 var(--space);
+}
+
+.workshop__image {
+    grid-area: image;
+}
+
+.workshop__title {
+    grid-area: title;
+}
+
+.time-and-place__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.workshop__time,
+.workshop__place,
+.workshop__description {
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
+}
+
+
+.workshop__time {
+    grid-area: time;
+    color: var(--clr-primary);
+}
+
+.workshop__star {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+}
+
+.workshop__place {
+    grid-area: place;
+}
+
+.workshop__description {
+    grid-area: description;
+    padding-top: var(--space);
+}
+
+@media (min-width: 48rem) {
+    .workshop {
+        grid-template-columns: 2fr 6fr;
+        grid-template-areas: 
+            "image title"
+            "image time-place"
+            "image description";
+        gap: var(--space);
+    }
+
+    .time-and-place__wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 33rem;
+    }
+
+    .workshop__star {
+        display: block;
+    }
+
+    .workshop__description {
+        padding-top: 0;
+        /* align-self: end; */
+    }
+}
+
+@media (min-width: 80rem) {
+    .workshop {
+        align-items: center;
+    }
+}
+
+.registration__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "contact"
+        "checkboxes"
+        "comments"
+        "submit";
+    gap: var(--space);
+    padding-top: var(--space);
+}
+
+@media (min-width: 48rem) {
+    .registration__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "contact checkboxes"
+            "comments checkboxes"
+            "submit submit";
+    }
+}
+
+.registration__form--contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.registration__form--checkboxes {
+    grid-area: checkboxes;
+    font-size: var(--fnt-size-main);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    justify-content: space-between;
+}
+
+.registration__form--checkboxes > legend {
+    padding: var(--space) 0;
+    font-size: inherit;
+    font-weight: 300;
+}
+
+.registration__form--comments {
+    grid-area: comments;
+}
+
+.registration__form--block-field,
+.registration__form--comments {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-weight: 300;
+    font-size: var(--fnt-size-main);
+}
+
+.registration__form--block-field input,
+.registration__form--comments textarea {
+    min-height: 3rem;
+    font-weight: 300;
+    border: 1px var(--clr-highlight) solid;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.registration__form--block-checkbox {
+    display: grid;
+    grid-template-areas: 
+        "check name"
+        "check descr";
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.registration__form--block-checkbox > input {
+    grid-area: check;
+}
+
+.registration__form--block-checkbox p:nth-child(2) {
+    grid-area: name;
+    color: var(--clr-primary);
+}
+
+.registration__form--block-checkbox p:last-child {
+    grid-area: descr;
+    font-weight: 300;
+}
+
+.registration__form--submit {
+    grid-area: submit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space);
+}
+
+.registration__form--submit > * {
+    min-width: 19rem;
+    width: 48%;
+}
+
+.registration__form--submit label {
+    display: flex;
+    gap: var(--space);
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
+}
+
+.registration__form--submit label > input,
+.registration__form--block-checkbox > input {
+    min-width: 1.5rem;
+    height: 1.5rem;
+    accent-color: var(--clr-highlight);
+}
+
+.registration__form--submit button {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-background);
+    min-height: 3rem;
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+}
+
+.registration__form--submit button:hover,
+.registration__form--submit button:focus,
+.registration__form--submit button:focus-visible {
+    background-color: var(--clr-highlight);
+    color: var(--clr-primary);
+    font-weight: 500;
+    transform: scale(1.05);
+}

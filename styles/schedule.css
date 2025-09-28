@@ -6,7 +6,7 @@
 @import url(/styles/header.css);
 @import url(/styles/footer.css);
 
-:root {
+/* :root {
     --fnt-size-hero-title: clamp(2rem, 9vw, 3.5rem);
     --fnt-size-hero-desc: clamp(1rem, 4vw, 2rem);
     --hero-gap: 2vw;
@@ -31,24 +31,25 @@
         --hero-brush-width: 22vw;
         --hero-brush-height: 4vw;
     }
-}
-
-body {
-    background-color: var(--clr-background);
-    font-family: var(--font-main);
-    color: var(--clr-text);
-}
+} */
 
 main {
     display: flex;
     flex-direction: column;
-    gap: var(--vmar);
+    /* gap: var(--vmar); */
     padding: 0 var(--hpad);
+    margin-bottom: var(--vmar);
 }
 
 .hero__image {
     background-image: 
-        linear-gradient(to top, rgba(0, 90, 141, 1), rgba(0, 90, 141, 0.25)),
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
+        url(/assets/images/schedule/sch-hero.jpg);
+}
+
+/* .hero__image {
+    background-image: 
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
         url(/assets/images/schedule/sch-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -88,14 +89,15 @@ main {
     font-family: var(--font-main);
     color: var(--clr-background);
     font-size: var(--fnt-size-hero-desc);
-    font-weight: 200;
+    font-weight: 300;
     width: 70%;
-}
+} */
 
-.section-info {
+/* .section-info {
     display: flex;
     flex-direction: column;
     gap: 4vw;
+    margin-top: var(--vmar);
 }
 
 .info__paragraph {
@@ -135,5 +137,90 @@ main {
 
     .info__paragraph::before {
         height: 1.25vw;
+    }
+} */
+
+.section-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    margin-top: var(--vmar);
+}
+
+.section__title {
+    font-size: var(--fnt-size-heading);
+    color: var(--clr-accent);
+    font-family: var(--font-deco);
+}
+
+.schedule__item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+        "time title"
+        "time place"
+        "time description"
+        "time button";
+    row-gap: 4vw;
+}
+
+.schedule__item-title {
+    grid-area: title;
+    position: relative;
+    z-index: 0;
+}
+
+.schedule__item-title::after {
+    content: "";
+    position: absolute;
+    width: min(57vw, 27rem);
+    height: min(6vw, 2.4rem);
+    top: 0;
+    left: 0;
+    background: url(/assets/images/schedule/sch-brush.svg) no-repeat center / contain;
+    z-index: -1;
+}
+
+.schedule__item-time {
+    grid-area: time;
+}
+
+.schedule__item-place {
+    grid-area: place;
+}
+
+.schedule__item-text {
+    grid-area: description;
+    font-weight: 300;
+}
+
+.schedule__item-button {
+    grid-area: button;
+    color: var(--clr-accent);
+    font-weight: 300;
+    justify-self: end;
+    transition: all 0.2s ease-in-out;
+}
+
+.schedule__item-button:hover,
+.schedule__item-button:focus,
+.schedule__item-button:focus-visible {
+    color: var(--clr-highlight);
+    outline: none;
+    transform: scale(1.1);
+}
+
+.schedule__item-title,
+.schedule__item-time,
+.schedule__item-place,
+.schedule__item-text,
+.schedule__item-button {
+    font-size: var(--fnt-size-main);
+}
+
+@media (min-width: 48rem) {
+    .section-schedule {
+        padding: 6vw 12vw 0 12vw;
+        margin-top: 0;
     }
 }
