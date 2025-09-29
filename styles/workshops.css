@@ -9,7 +9,6 @@
 main {
     display: flex;
     flex-direction: column;
-    /* gap: var(--vmar); */
     padding: 0 var(--hpad);
     margin-bottom: var(--vmar);
 }

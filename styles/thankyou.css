@@ -1,0 +1,33 @@
+@import url(/styles/global-reset.css);
+@import url(/styles/fonts.css);
+@import url(/styles/variables.css);
+@import url(/styles/colours.css);
+
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--hpad);
+    margin-bottom: var(--vmar);
+}
+
+.hero__image {
+    background-image: 
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
+        url(/assets/images/ty-hero.jpg);
+}
+
+.info__paragraph a {
+    text-decoration: underline;
+    color: var(--clr-primary);
+    font-weight: 500;
+}
+
+.info__paragraph a:hover,
+.info__paragraph a:focus,
+.info__paragraph a:focus-visible {
+    text-decoration: none;
+    color: var(--clr-highlight);
+}
