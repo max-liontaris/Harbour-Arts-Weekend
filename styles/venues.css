@@ -19,12 +19,6 @@ main {
         url(/assets/images/venues/venues-hero.jpg);
 }
 
-.headings {
-    color: var(--clr-accent);
-    font-family: var(--font-deco);
-    font-size: var(--fnt-size-heading);
-}
-
 .section-venues {
     display: flex;
     flex-wrap: wrap;

@@ -28,7 +28,7 @@ main {
 .section-workshops {
     display: flex;
     flex-direction: column;
-    gap: var(--space);
+    gap: var(--vmar);
 }
 
 .section-workshops,

@@ -74,9 +74,6 @@ body {
 }
 
 .hero__image {
-    /* background-image: 
-        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
-        url(/assets/images/schedule/sch-hero.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -117,6 +114,12 @@ body {
     font-size: var(--fnt-size-hero-desc);
     font-weight: 300;
     width: 70%;
+}
+
+.headings {
+    color: var(--clr-accent);
+    font-family: var(--font-deco);
+    font-size: var(--fnt-size-heading);
 }
 
 .section-info {
