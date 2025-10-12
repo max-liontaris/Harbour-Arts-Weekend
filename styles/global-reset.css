@@ -43,7 +43,6 @@ a {
   font-family: inherit;
   color: inherit;
   text-decoration: none;
-  /* display: block; */
 }
 
 ul {
@@ -56,6 +55,10 @@ picture {
 
 fieldset {
     border: none;
+}
+
+address {
+    font-style: normal;
 }
 
 .visually-hidden {
@@ -122,11 +125,16 @@ body {
     font-size: var(--fnt-size-heading);
 }
 
+.texts {
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
+}
+
 .section-info {
     display: flex;
     flex-direction: column;
     gap: 4vw;
-    margin-top: var(--vmar);
+    /* margin-top: var(--vmar); */
 }
 
 .info__paragraph {

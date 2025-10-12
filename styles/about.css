@@ -1,0 +1,132 @@
+@import url(/styles/global-reset.css);
+@import url(/styles/fonts.css);
+@import url(/styles/variables.css);
+@import url(/styles/colours.css);
+
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--hpad);
+    margin-bottom: var(--vmar);
+    gap: var(--vmar);
+}
+
+.hero__image {
+    background-image: 
+        linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
+        url(/assets/images/about/hero-about.jpg);
+}
+
+.section-travel,
+.section-text,
+.section-aim {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-text a {
+    color: var(--clr-primary);
+    text-decoration: underline;
+}
+
+.section-text a:hover,
+.section-text a:focus,
+.section-text a:focus-visible,
+.travel__contact-phone:hover,
+.travel__contact-phone:focus-visible,
+.travel__contact-phone:focus,
+.travel__contact-mail:hover,
+.travel__contact-mail:focus,
+.travel__contact-mail:focus-visible {
+    color: var(--clr-accent);
+    text-decoration: none;
+}
+
+.travel__subheading {
+    font-weight: 500;
+}
+
+.travel__contact {
+    line-height: 2;
+    border: 1px var(--clr-highlight) solid;
+    padding: 1rem;
+}
+
+.travel__contact-phone::before {
+    content: "📞";
+}
+
+.travel__contact-mail::before {
+    content: "✉️";
+}
+
+.travel__contact-phone,
+.travel__contact-mail {
+    display: flex;
+    gap: 1rem;
+}
+
+.aim__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title desc"
+        "line line";
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aim__block-title {
+    grid-area: title;
+    font-size: var(--fnt-size-heading);
+    font-family: var(--font-deco);
+    color: var(--clr-accent);
+    line-height: 1.1;
+}
+
+.aim__block-arrow {
+    background: url(/assets/images/home-arrow.svg) no-repeat center / contain;
+    grid-area: arrow;
+    width: clamp(2rem, 10.5vw, 4rem);
+    height: 100%;
+    justify-self: center;
+    display: none;
+}
+
+.aim__block-desc {
+    grid-area: desc;
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
+}
+
+.aim__block:nth-child(2)::after,
+.aim__block:nth-child(3)::after,
+.aim__block:nth-child(4)::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-highlight);
+    grid-area: line;
+    margin-top: var(--space);
+}
+
+@media (min-width: 48rem) {
+    .aim__block {
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-areas:
+        "title arrow desc"
+        "line line line";
+    }
+
+    .aim__block-arrow {
+        display: block;
+    }
+
+    .travel__contact {
+        padding: 2rem;
+    }
+}

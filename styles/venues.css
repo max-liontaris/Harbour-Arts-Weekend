@@ -11,6 +11,7 @@ main {
     flex-direction: column;
     padding: 0 var(--hpad);
     margin-bottom: var(--vmar);
+    gap: var(--vmar);
 }
 
 .hero__image {
@@ -22,7 +23,6 @@ main {
 .section-venues {
     display: flex;
     flex-wrap: wrap;
-    margin-top: var(--vmar);
 }
 
 .venues__card {
@@ -85,7 +85,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--space);
-    margin-top: var(--vmar);
 }
 
 .logistics__block {
@@ -96,6 +95,12 @@ main {
         "line line line";
     align-items: center;
     justify-content: space-between;
+}
+
+@media (min-width: 48rem) {
+    .logistics__block {
+        grid-template-columns: 1fr 1fr 3fr;
+    }
 }
 
 .logistics__block-title {
@@ -120,10 +125,10 @@ main {
     font-weight: 300;
 }
 
-.logistics__block:nth-child(2)::after,
-.logistics__block:nth-child(3)::after,
-.logistics__block:nth-child(4)::after {
-    content: " ";
+.logistics__block:nth-child(4)::after,
+.logistics__block:nth-child(5)::after,
+.logistics__block:nth-child(6)::after {
+    content: "";
     width: 100%;
     height: 1px;
     background-color: var(--clr-highlight);
