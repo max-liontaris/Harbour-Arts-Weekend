@@ -1,11 +1,11 @@
-@import url(/styles/global-reset.css);
-@import url(/styles/common.css);
-@import url(/styles/fonts.css);
-@import url(/styles/variables.css);
-@import url(/styles/colours.css);
+@import url(global-reset.css);
+@import url(common.css);
+@import url(fonts.css);
+@import url(variables.css);
+@import url(colours.css);
 
-@import url(/styles/header.css);
-@import url(/styles/footer.css);
+@import url(header.css);
+@import url(footer.css);
 
 main {
     display: flex;
@@ -18,7 +18,7 @@ main {
 .hero__image {
     background-image: 
         linear-gradient(to top, rgba(0, 90, 141, 0.8), rgba(0, 90, 141, 0)),
-        url(/assets/images/schedule/sch-hero.jpg);
+        url(../assets/images/schedule/sch-hero.jpg);
 }
 
 .section-schedule {
@@ -59,7 +59,7 @@ main {
     height: min(6vw, 2.4rem);
     top: 0;
     left: 0;
-    background: url(/assets/images/schedule/sch-brush.svg) no-repeat center / contain;
+    background: url(../assets/images/schedule/sch-brush.svg) no-repeat center / contain;
     z-index: -1;
     opacity: 0.6;
 }
