@@ -4,6 +4,13 @@ body {
     color: var(--clr-text);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vmar);
+    padding: 0 var(--hpad);
+}
+
 .headings {
     color: var(--clr-accent);
     font-family: var(--font-deco);
