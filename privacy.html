@@ -6,8 +6,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/styles/utility.css">
+        <link rel="icon" href="/assets/fav.ico" type="image/x-icon">
+        <link rel="preload" href="/assets/fonts/Caveat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="/assets/fonts/MerriweatherSans-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     </head>
     <body>
+        <!-- Skip link for accessibility -->
+        <a href="#main" class="skip-link">Skip to main content</a>
+        
         <header class="site__header">
             <div class="header__logo">
                 <a href="/">
@@ -26,7 +32,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main">
             <section class="title">
                 <h1 class="title__heading headings">Privacy Policy</h1>
             </section>

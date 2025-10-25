@@ -11,6 +11,32 @@ main {
     padding: 0 var(--hpad);
 }
 
+/* Skip link: visually hidden until focused */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  color: #000;
+  z-index: 100;
+  /* Visually Hidden */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  width: auto;
+  white-space: normal;
+}
+
 .headings {
     color: var(--clr-accent);
     font-family: var(--font-deco);
