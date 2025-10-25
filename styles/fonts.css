@@ -1,7 +1,7 @@
 /* Merriweather Sans variable */
 @font-face {
   font-family: 'Merriweather Sans';
-  src: url("/assets/fonts/MerriweatherSans-VariableFont_wght.ttf") format(truetype);
+  src: url("../assets/fonts/MerriweatherSans-VariableFont_wght.ttf") format(truetype);
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 /* Caveat variable (script headings) */
 @font-face {
   font-family: 'Caveat';
-  src: url('/assets/fonts/Caveat-VariableFont_wght.ttf') format('truetype');
+  src: url('../assets/fonts/Caveat-VariableFont_wght.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
