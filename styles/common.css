@@ -1,76 +1,21 @@
-@import url(/styles/variables.css);
-
-/* Global reset and box model */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+    background-color: var(--clr-background);
+    font-family: var(--font-main);
+    color: var(--clr-text);
 }
 
-/* Prevent horizontal overflow
-    Vanilla only! NEVER use it with frameworks! */
-body,
-html {
-    width: 100%;
-    overflow-x: hidden;
+.headings {
+    color: var(--clr-accent);
+    font-family: var(--font-deco);
+    font-size: var(--fnt-size-heading);
 }
 
-/* Form element smoothing */
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: 100%;
+.texts {
+    font-size: var(--fnt-size-main);
+    font-weight: 300;
 }
 
-button,
-label {
-  cursor: pointer;
-}
-
-/* Prevent media elements overflow */
-img, iframe, video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Links behave! */
-a {
-  font-family: inherit;
-  color: inherit;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-picture {
-  display: block;
-}
-
-fieldset {
-    border: none;
-}
-
-address {
-    font-style: normal;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  margin: -1px; padding: 0; border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* .hero__image {
+.hero__image {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -84,17 +29,17 @@ address {
     gap: var(--hero-gap);
     padding: var(--hero-padding);
     border-radius: 0.5rem;
-} */
+}
 
-/* .hero__title {
+.hero__title {
     font-family: var(--font-deco);
     color: var(--clr-background);
     font-size: var(--fnt-size-hero-title);
     position: relative;
     z-index: 0;
-} */
+}
 
-/* .hero__title::after {
+.hero__title::after {
     content: "";
     background: url(/assets/images/schedule/pink-brush.svg) no-repeat center / contain;
     position: absolute;
@@ -103,38 +48,38 @@ address {
     z-index: -1;
     width: var(--hero-brush-width);
     height: var(--hero-brush-height);
-} */
+}
 
-/* .hero__description {
+.hero__description {
     font-family: var(--font-main);
     color: var(--clr-background);
     font-size: var(--fnt-size-hero-desc);
     font-weight: 300;
     width: 70%;
-} */
+}
 
-/* .section-info {
+.section-info {
     display: flex;
     flex-direction: column;
     gap: 4vw;
-} */
+}
 
-/* .info__paragraph {
+.info__paragraph {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 3fr;
-} */
+}
 
-/* .info__paragraph::before {
+.info__paragraph::before {
     content: "";
     background: url(/assets/images/home-arrow.svg) no-repeat center / contain;
     width: min(19vw, 70px);
     height: 4vw;
     padding: 0 4vw;
     align-self: center;
-} */
+}
 
-/* @media (min-width: 48rem) {
+@media (min-width: 48rem) {
     .section-info {
         border: 1px var(--clr-highlight) solid;
         background-color: #fff;
@@ -155,4 +100,4 @@ address {
     .info__paragraph::before {
         height: 1.25vw;
     }
-} */
+}

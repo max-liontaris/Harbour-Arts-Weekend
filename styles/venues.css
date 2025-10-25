@@ -1,4 +1,5 @@
 @import url(/styles/global-reset.css);
+@import url(/styles/common.css);
 @import url(/styles/fonts.css);
 @import url(/styles/variables.css);
 @import url(/styles/colours.css);
@@ -75,8 +76,6 @@ main {
 .venue__description {
     margin-block: auto;
     padding: clamp(1rem, 6vw, 1.5rem);
-    font-weight: 300;
-    font-size: var(--fnt-size-main);
 }
 
 /* ---------- SECTION LOGISTICS ---------- */
@@ -105,9 +104,6 @@ main {
 
 .logistics__block-title {
     grid-area: title;
-    font-size: var(--fnt-size-heading);
-    font-family: var(--font-deco);
-    color: var(--clr-accent);
     line-height: 1.1;
 }
 
@@ -121,8 +117,6 @@ main {
 
 .logistics__block-desc {
     grid-area: desc;
-    font-size: var(--fnt-size-main);
-    font-weight: 300;
 }
 
 .logistics__block:nth-child(4)::after,

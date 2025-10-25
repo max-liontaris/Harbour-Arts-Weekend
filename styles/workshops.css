@@ -1,4 +1,5 @@
 @import url(/styles/global-reset.css);
+@import url(/styles/common.css);
 @import url(/styles/fonts.css);
 @import url(/styles/variables.css);
 @import url(/styles/colours.css);
@@ -55,14 +56,6 @@ main {
     flex-direction: column;
 }
 
-.workshop__time,
-.workshop__place,
-.workshop__description {
-    font-size: var(--fnt-size-main);
-    font-weight: 300;
-}
-
-
 .workshop__time {
     grid-area: time;
     color: var(--clr-primary);
@@ -105,7 +98,6 @@ main {
 
     .workshop__description {
         padding-top: 0;
-        /* align-self: end; */
     }
 }
 
@@ -146,7 +138,6 @@ main {
 
 .registration__form--checkboxes {
     grid-area: checkboxes;
-    font-size: var(--fnt-size-main);
     display: flex;
     flex-direction: column;
     gap: var(--space);
@@ -156,7 +147,6 @@ main {
 .registration__form--checkboxes > legend {
     padding: var(--space) 0;
     font-size: inherit;
-    font-weight: 300;
 }
 
 .registration__form--comments {
@@ -168,8 +158,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    font-weight: 300;
-    font-size: var(--fnt-size-main);
 }
 
 .registration__form--block-field input,
@@ -239,8 +227,6 @@ main {
     background-color: var(--clr-accent);
     color: var(--clr-background);
     min-height: 3rem;
-    font-size: var(--fnt-size-main);
-    font-weight: 300;
     transition: all 0.2s ease-in-out;
 }
 

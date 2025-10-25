@@ -1,4 +1,5 @@
 @import url(/styles/global-reset.css);
+@import url(/styles/common.css);
 @import url(/styles/fonts.css);
 @import url(/styles/variables.css);
 @import url(/styles/colours.css);
@@ -33,12 +34,6 @@ main {
     }
 }
 
-.section__title {
-    font-size: var(--fnt-size-heading);
-    color: var(--clr-accent);
-    font-family: var(--font-deco);
-}
-
 .schedule__item {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -54,6 +49,7 @@ main {
     grid-area: title;
     position: relative;
     z-index: 0;
+    font-weight: 700;
 }
 
 .schedule__item-title::after {
@@ -74,17 +70,16 @@ main {
 
 .schedule__item-place {
     grid-area: place;
+    font-weight: 500;
 }
 
 .schedule__item-text {
     grid-area: description;
-    font-weight: 300;
 }
 
 .schedule__item-button {
     grid-area: button;
     color: var(--clr-accent);
-    font-weight: 300;
     justify-self: end;
     transition: all 0.2s ease-in-out;
 }
@@ -95,12 +90,4 @@ main {
     color: var(--clr-highlight);
     outline: none;
     transform: scale(1.1);
-}
-
-.schedule__item-title,
-.schedule__item-time,
-.schedule__item-place,
-.schedule__item-text,
-.schedule__item-button {
-    font-size: var(--fnt-size-main);
 }
